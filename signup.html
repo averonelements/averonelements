@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Averon Elements</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body data-auth-mode="signup">
+    <header>
+      <div class="container navbar">
+        <a class="brand" href="/index.html">Averon Elements</a>
+        <nav class="nav-links">
+          <a href="/index.html">Home</a>
+          <a href="/collection.html">Collection</a>
+          <a href="/beautify.html">Beautify</a>
+          <a href="/contact.html">Contact Us</a>
+          <a id="loginLink" class="auth-button" href="/login.html">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container center">
+      <h1>Create Account</h1>
+      <form id="authForm" class="container" style="max-width: 460px;">
+        <label for="fullName">Full Name</label>
+        <input id="fullName" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" required />
+
+        <label for="password">Password (8+ chars)</label>
+        <input id="password" type="password" minlength="8" required />
+
+        <button type="submit" class="button primary">Create Account</button>
+        <p>Already registered? <a href="/login.html">Login</a></p>
+        <div id="message" class="message"></div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="container">Averon Elements | info@averonelements.com</div>
+    </footer>
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+  </body>
+</html>

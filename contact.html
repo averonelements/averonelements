@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Averon Elements</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <a class="brand" href="/index.html">Averon Elements</a>
+        <nav class="nav-links">
+          <a href="/index.html">Home</a>
+          <a href="/collection.html">Collection</a>
+          <a href="/beautify.html">Beautify</a>
+          <a href="/contact.html">Contact Us</a>
+          <a id="loginLink" class="auth-button" href="/login.html">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-title">
+        <h1>Contact Us</h1>
+        <p>For partnerships, custom orders, and support requests.</p>
+      </section>
+
+      <section class="section split">
+        <article class="card">
+          <h3>Averon Elements</h3>
+          <p>Email: info@averonelements.com</p>
+          <p>Business Hours: Mon-Fri, 9:00 AM - 6:00 PM</p>
+          <p>Response SLA: within 24 hours</p>
+        </article>
+
+        <form id="contactForm">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" type="email" required />
+
+          <label for="subject">Subject</label>
+          <input id="subject" type="text" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="6" required></textarea>
+
+          <button class="button primary" type="submit">Send Message</button>
+          <div id="contactMessage" class="message"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">Averon Elements | info@averonelements.com</div>
+    </footer>
+    <script src="/js/main.js"></script>
+    <script src="/js/contact.js"></script>
+  </body>
+</html>
