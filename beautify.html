@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beautify Membership | Averon Elements</title>
+  <meta name="description" content="Beautify is a $79.99/month membership: choose 4 pieces per month and receive 1 each week."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="averon.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="nav">
+      <a class="logo" href="index.html" aria-label="Averon Elements Home">
+        <strong>Averon Elements</strong>
+        <span>Fine Jewelry</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="">Home</a>
+<a href="products.html" class="">Products</a>
+<a href="beautify.html" class="active">Beautify</a>
+<a href="heritage.html" class="">Heritage</a>
+      </nav>
+      <div class="nav-right">
+        <button class="btn-login" type="button" onclick="location.href='login.html'">Login</button>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="section" style="padding-top:38px;">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="brand-mark">Beautify</div>
+          <h1 style="margin-top:10px;">Membership</h1>
+          <p style="margin-top:10px; max-width: 74ch;">
+            Subscribe for <strong>$79.99/month</strong>. Choose <strong>4 pieces</strong> from our collection each month—any mix of necklaces, rings, bracelets, or earrings.
+            We deliver <strong>1 piece each week</strong>.
+          </p>
+        </div>
+        <div class="right">
+          <span class="pill">4 picks / month</span>
+          <span class="pill">1 delivery / week</span>
+          <span class="pill">$79.99</span>
+        </div>
+      </div>
+
+      <div class="beautify-wrap">
+        <div>
+          <div class="card" style="padding:18px;">
+            <div class="brand-mark">How it works</div>
+            <div class="grid-4" style="margin-top:14px;">
+              <div class="card" style="padding:14px; box-shadow:none;">
+                <div class="brand-mark">Step 1</div>
+                <p style="margin-top:8px;">Start your membership for <strong>$79.99/month</strong>.</p>
+              </div>
+              <div class="card" style="padding:14px; box-shadow:none;">
+                <div class="brand-mark">Step 2</div>
+                <p style="margin-top:8px;">Choose <strong>4 pieces</strong> from the eligible collection.</p>
+              </div>
+              <div class="card" style="padding:14px; box-shadow:none;">
+                <div class="brand-mark">Step 3</div>
+                <p style="margin-top:8px;">We ship <strong>one piece each week</strong>.</p>
+              </div>
+              <div class="card" style="padding:14px; box-shadow:none;">
+                <div class="brand-mark">Step 4</div>
+                <p style="margin-top:8px;">Refresh selections next month.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section" style="padding:26px 0 0;">
+            <div class="section-head">
+              <div>
+                <h2>Select your 4</h2>
+                <p class="small">Pick any 4 products below. Your selection is saved in this browser.</p>
+              </div>
+              <div class="right">
+                <div class="filters" style="margin:0;">
+                  <button class="filter-btn active" data-filter="All" type="button">All</button>
+                  <button class="filter-btn" data-filter="Necklaces" type="button">Necklaces</button>
+                  <button class="filter-btn" data-filter="Rings" type="button">Rings</button>
+                  <button class="filter-btn" data-filter="Bracelets" type="button">Bracelets</button>
+                  <button class="filter-btn" data-filter="Earrings" type="button">Earrings</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="beautifyGrid" class="grid-4"></div>
+          </div>
+
+          <div class="card" style="padding:18px; margin-top:18px;">
+            <div class="brand-mark">Delivery cadence</div>
+            <p style="margin-top:10px;">Week 1 → Item 1 • Week 2 → Item 2 • Week 3 → Item 3 • Week 4 → Item 4</p>
+          </div>
+
+          <div class="card" style="padding:18px; margin-top:18px;">
+            <div class="brand-mark">FAQ</div>
+            <p style="margin-top:10px;"><strong>Can I mix categories?</strong> Yes—any mix of necklaces, rings, bracelets, and earrings.</p>
+            <p style="margin-top:8px;"><strong>When do you ship?</strong> One shipment per week (timing set during checkout).</p>
+            <p style="margin-top:8px;"><strong>Can I change my picks?</strong> Update anytime before the month begins (configure your rule here).</p>
+          </div>
+        </div>
+
+        <aside class="sticky">
+          <div class="summary">
+            <div class="brand-mark">Your month</div>
+            <h2 style="margin-top:10px;">$79.99</h2>
+            <p class="small" style="margin-top:6px;">Selected: <strong><span id="selCount">0</span>/4</strong></p>
+            <div class="progress" aria-label="Selection progress"><div id="progBar"></div></div>
+
+            <div class="summary-list" id="selList"></div>
+
+            <div class="hr"></div>
+            <button id="continueBtn" class="lux-btn" type="button" disabled style="width:100%; opacity:.55; cursor:not-allowed;">Continue to Checkout</button>
+            <button id="clearBtn" class="lux-btn secondary" type="button" style="width:100%; margin-top:10px;">Clear selection</button>
+
+            <p class="small muted" style="margin-top:12px;">Checkout integration (Stripe) can be connected after your product IDs are ready.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-mark">Averon Elements</div>
+        <p class="small" style="margin-top:10px;">Premium, modern jewelry—crafted to feel timeless, designed to wear daily.</p>
+        <p class="small" style="margin-top:10px;">Support: <a href="mailto:support@averonelements.com">support@averonelements.com</a></p>
+      </div>
+      <div>
+        <div class="brand-mark">Explore</div>
+        <p class="small" style="margin-top:10px;"><a href="products.html">Products</a></p>
+        <p class="small" style="margin-top:6px;"><a href="beautify.html">Beautify Membership</a></p>
+        <p class="small" style="margin-top:6px;"><a href="heritage.html">Heritage</a></p>
+      </div>
+      <div>
+        <div class="brand-mark">Policies</div>
+        <p class="small" style="margin-top:10px;"><a href="heritage.html#shipping">Shipping</a></p>
+        <p class="small" style="margin-top:6px;"><a href="heritage.html#returns">Returns</a></p>
+        <p class="small" style="margin-top:6px;"><a href="heritage.html#care">Care</a></p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:18px; opacity:.6;">© <span id="year"></span> Averon Elements. All rights reserved.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<script src="averon.js"></script>
+<script>
+  const MAX = 4;
+  const key = 'averon_beautify_selection';
+  const grid = document.getElementById('beautifyGrid');
+  const btns = Array.from(document.querySelectorAll('.filter-btn'));
+  const selCount = document.getElementById('selCount');
+  const progBar = document.getElementById('progBar');
+  const selList = document.getElementById('selList');
+  const continueBtn = document.getElementById('continueBtn');
+  const clearBtn = document.getElementById('clearBtn');
+
+  function loadSel(){
+    try{ return JSON.parse(localStorage.getItem(key) || '[]'); }catch(e){ return []; }
+  }
+  function saveSel(arr){ localStorage.setItem(key, JSON.stringify(arr)); }
+
+  function setContinueState(sel){
+    const ok = sel.length === MAX;
+    continueBtn.disabled = !ok;
+    continueBtn.style.opacity = ok ? '1' : '.55';
+    continueBtn.style.cursor = ok ? 'pointer' : 'not-allowed';
+  }
+
+  function renderSummary(){
+    const sel = loadSel();
+    selCount.textContent = sel.length;
+    progBar.style.width = ((sel.length / MAX) * 100) + '%';
+    selList.innerHTML = '';
+    if(sel.length === 0){
+      selList.innerHTML = '<div class="summary-item"><span class="muted">No items selected yet.</span><span></span></div>';
+    } else {
+      sel.map(id => AVERON_PRODUCTS.find(p => p.id === id)).filter(Boolean).forEach((p, idx) => {
+        const row = document.createElement('div');
+        row.className = 'summary-item';
+        row.innerHTML = `<span>${idx+1}. ${p.name}</span><button class="filter-btn" type="button" data-remove="${p.id}" style="padding:.35rem .65rem;">Remove</button>`;
+        selList.appendChild(row);
+      });
+      // bind remove
+      Array.from(selList.querySelectorAll('[data-remove]')).forEach(b => b.addEventListener('click', () => {
+        const id = b.getAttribute('data-remove');
+        const next = loadSel().filter(x => x !== id);
+        saveSel(next);
+        renderAll(currentFilter);
+      }));
+    }
+    setContinueState(sel);
+  }
+
+  let currentFilter = 'All';
+
+  function renderAll(filter){
+    currentFilter = filter;
+    grid.innerHTML = '';
+    const sel = loadSel();
+    const items = (filter === 'All') ? AVERON_PRODUCTS : AVERON_PRODUCTS.filter(p => p.category === filter);
+
+    items.forEach(p => {
+      const selected = sel.includes(p.id);
+      const card = renderProductCard(p, {
+        buttonText: selected ? 'Selected' : 'Select',
+        buttonClass: selected ? 'lux-btn' : 'lux-btn secondary',
+        onClick: () => {
+          const s = loadSel();
+          const isSel = s.includes(p.id);
+          if(isSel){
+            saveSel(s.filter(x => x !== p.id));
+          } else {
+            if(s.length >= MAX){
+              alert('You can select up to 4 items per month.');
+              return;
+            }
+            saveSel([...s, p.id]);
+          }
+          renderAll(currentFilter);
+        }
+      });
+      grid.appendChild(card);
+    });
+    renderSummary();
+  }
+
+  btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    renderAll(b.dataset.filter);
+  }));
+
+  clearBtn.addEventListener('click', () => {
+    saveSel([]);
+    renderAll(currentFilter);
+  });
+
+  continueBtn.addEventListener('click', () => {
+    // Hook this to Stripe Checkout when ready.
+    // For now, route to success page stub.
+    window.location.href = 'success.html';
+  });
+
+  renderAll('All');
+</script>
+</body>
+</html>

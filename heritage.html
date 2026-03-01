@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heritage | Averon Elements</title>
+  <meta name="description" content="Learn about Averon Elements: our story, standards, and how to contact us."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="averon.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="nav">
+      <a class="logo" href="index.html" aria-label="Averon Elements Home">
+        <strong>Averon Elements</strong>
+        <span>Fine Jewelry</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="">Home</a>
+<a href="products.html" class="">Products</a>
+<a href="beautify.html" class="">Beautify</a>
+<a href="heritage.html" class="active">Heritage</a>
+      </nav>
+      <div class="nav-right">
+        <button class="btn-login" type="button" onclick="location.href='login.html'">Login</button>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="section" style="padding-top:38px;">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="brand-mark">Heritage</div>
+          <h1 style="margin-top:10px;">A modern house of essentials</h1>
+          <p style="margin-top:10px; max-width: 76ch;">
+            Averon Elements exists to create jewelry that feels premium without excess—pieces you reach for daily, designed to endure.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top:18px;">
+        <div class="card" style="padding:18px;">
+          <div class="brand-mark">Design</div>
+          <p style="margin-top:10px;">Minimal silhouettes. Balanced proportions. A refined profile on every edge.</p>
+        </div>
+        <div class="card" style="padding:18px;">
+          <div class="brand-mark">Finish</div>
+          <p style="margin-top:10px;">High-polish surfaces and consistent plating to maintain a luxury feel.</p>
+        </div>
+        <div class="card" style="padding:18px;">
+          <div class="brand-mark">Service</div>
+          <p style="margin-top:10px;">Clear support, simple policies, and a commitment to your experience.</p>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top:18px;">
+        <div class="card" id="shipping" style="padding:18px;">
+          <div class="brand-mark">Shipping</div>
+          <p style="margin-top:10px;">Standard shipping details go here (carriers, handling time, weekly Beautify cadence).</p>
+        </div>
+        <div class="card" id="returns" style="padding:18px;">
+          <div class="brand-mark">Returns</div>
+          <p style="margin-top:10px;">Return and exchange policy goes here (windows, conditions, subscription rules).</p>
+        </div>
+        <div class="card" id="care" style="padding:18px;">
+          <div class="brand-mark">Care</div>
+          <p style="margin-top:10px;">Store in a dry pouch, avoid chemicals, wipe gently after wear. Add your official care guide.</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding:18px; margin-top:18px;">
+        <div class="brand-mark">Contact</div>
+        <p style="margin-top:10px;">Email: <a href="mailto:support@averonelements.com">support@averonelements.com</a></p>
+
+        <form class="form" style="margin-top:12px;" onsubmit="event.preventDefault(); alert('Thanks! We will get back to you shortly.'); this.reset();">
+          <input class="input" type="text" name="name" placeholder="Your name" required />
+          <input class="input" type="email" name="email" placeholder="Your email" required />
+          <textarea name="message" placeholder="How can we help?" required></textarea>
+          <button class="lux-btn" type="submit">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-mark">Averon Elements</div>
+        <p class="small" style="margin-top:10px;">Premium, modern jewelry—crafted to feel timeless, designed to wear daily.</p>
+        <p class="small" style="margin-top:10px;">Support: <a href="mailto:support@averonelements.com">support@averonelements.com</a></p>
+      </div>
+      <div>
+        <div class="brand-mark">Explore</div>
+        <p class="small" style="margin-top:10px;"><a href="products.html">Products</a></p>
+        <p class="small" style="margin-top:6px;"><a href="beautify.html">Beautify Membership</a></p>
+        <p class="small" style="margin-top:6px;"><a href="heritage.html">Heritage</a></p>
+      </div>
+      <div>
+        <div class="brand-mark">Policies</div>
+        <p class="small" style="margin-top:10px;"><a href="heritage.html#shipping">Shipping</a></p>
+        <p class="small" style="margin-top:6px;"><a href="heritage.html#returns">Returns</a></p>
+        <p class="small" style="margin-top:6px;"><a href="heritage.html#care">Care</a></p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:18px; opacity:.6;">© <span id="year"></span> Averon Elements. All rights reserved.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | Averon Elements</title>
+  <meta name="description" content="Shop necklaces, rings, bracelets, and earrings from Averon Elements."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="averon.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="nav">
+      <a class="logo" href="index.html" aria-label="Averon Elements Home">
+        <strong>Averon Elements</strong>
+        <span>Fine Jewelry</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="">Home</a>
+<a href="products.html" class="active">Products</a>
+<a href="beautify.html" class="">Beautify</a>
+<a href="heritage.html" class="">Heritage</a>
+      </nav>
+      <div class="nav-right">
+        <button class="btn-login" type="button" onclick="location.href='login.html'">Login</button>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="section" style="padding-top:38px;">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="brand-mark">Products</div>
+          <h1 style="margin-top:10px;">The Collection</h1>
+          <p style="margin-top:10px; max-width: 70ch;">Explore our core categories: necklaces, rings, bracelets, and earrings. Minimal design. Premium finish.</p>
+        </div>
+        <div class="right">
+          <span class="pill">Beautify eligible: all items</span>
+        </div>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Product categories">
+        <button class="filter-btn active" data-filter="All" type="button">All</button>
+        <button class="filter-btn" data-filter="Necklaces" type="button">Necklaces</button>
+        <button class="filter-btn" data-filter="Rings" type="button">Rings</button>
+        <button class="filter-btn" data-filter="Bracelets" type="button">Bracelets</button>
+        <button class="filter-btn" data-filter="Earrings" type="button">Earrings</button>
+      </div>
+
+      <div id="productsGrid" class="grid-4"></div>
+
+      <div class="card" style="padding:18px; margin-top:18px;">
+        <div class="brand-mark">Want four pieces each month?</div>
+        <p style="margin-top:10px;">Join <strong>Beautify</strong> for <strong>$79.99/month</strong>. Choose 4 items and receive 1 each week.</p>
+        <div style="margin-top:12px;">
+          <button class="lux-btn" type="button" onclick="location.href='beautify.html'">Explore Beautify</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-mark">Averon Elements</div>
+        <p class="small" style="margin-top:10px;">Premium, modern jewelry—crafted to feel timeless, designed to wear daily.</p>
+        <p class="small" style="margin-top:10px;">Support: <a href="mailto:support@averonelements.com">support@averonelements.com</a></p>
+      </div>
+      <div>
+        <div class="brand-mark">Explore</div>
+        <p class="small" style="margin-top:10px;"><a href="products.html">Products</a></p>
+        <p class="small" style="margin-top:6px;"><a href="beautify.html">Beautify Membership</a></p>
+        <p class="small" style="margin-top:6px;"><a href="heritage.html">Heritage</a></p>
+      </div>
+      <div>
+        <div class="brand-mark">Policies</div>
+        <p class="small" style="margin-top:10px;"><a href="heritage.html#shipping">Shipping</a></p>
+        <p class="small" style="margin-top:6px;"><a href="heritage.html#returns">Returns</a></p>
+        <p class="small" style="margin-top:6px;"><a href="heritage.html#care">Care</a></p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:18px; opacity:.6;">© <span id="year"></span> Averon Elements. All rights reserved.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<script src="averon.js"></script>
+<script>
+  const grid = document.getElementById('productsGrid');
+  const btns = Array.from(document.querySelectorAll('.filter-btn'));
+
+  function render(filter){
+    grid.innerHTML = '';
+    const items = (filter === 'All') ? AVERON_PRODUCTS : AVERON_PRODUCTS.filter(p => p.category === filter);
+    items.forEach(p => grid.appendChild(renderProductCard(p, {
+      buttonText: 'Add to Beautify',
+      buttonClass: 'lux-btn secondary',
+      onClick: () => location.href = 'beautify.html'
+    })));
+  }
+
+  btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    render(b.dataset.filter);
+  }));
+
+  render('All');
+</script>
+</body>
+</html>

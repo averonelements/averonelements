@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Averon Elements</title>
+  <meta name="description" content="Log in to manage your Beautify membership and account."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="averon.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="nav">
+      <a class="logo" href="index.html" aria-label="Averon Elements Home">
+        <strong>Averon Elements</strong>
+        <span>Fine Jewelry</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html" class="">Home</a>
+<a href="products.html" class="">Products</a>
+<a href="beautify.html" class="">Beautify</a>
+<a href="heritage.html" class="">Heritage</a>
+      </nav>
+      <div class="nav-right">
+        <button class="btn-login" type="button" onclick="location.href='login.html'">Login</button>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="section" style="padding-top:38px;">
+    <div class="container">
+      <div class="card" style="padding:22px; max-width: 520px; margin: 0 auto;">
+        <div class="brand-mark">Account</div>
+        <h1 style="margin-top:10px;">Login</h1>
+        <p style="margin-top:10px;">Access your membership and manage monthly selections.</p>
+
+        <form class="form" style="margin-top:14px;" onsubmit="event.preventDefault(); location.href='dashboard.html';">
+          <input class="input" type="email" placeholder="Email address" required />
+          <input class="input" type="password" placeholder="Password" required />
+          <button class="lux-btn" type="submit">Sign in</button>
+          <button class="lux-btn secondary" type="button" onclick="location.href='auth.html'">Create account</button>
+        </form>
+
+        <p class="small muted" style="margin-top:12px;">Demo flow: login routes to a placeholder dashboard.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-mark">Averon Elements</div>
+        <p class="small" style="margin-top:10px;">Premium, modern jewelry—crafted to feel timeless, designed to wear daily.</p>
+        <p class="small" style="margin-top:10px;">Support: <a href="mailto:support@averonelements.com">support@averonelements.com</a></p>
+      </div>
+      <div>
+        <div class="brand-mark">Explore</div>
+        <p class="small" style="margin-top:10px;"><a href="products.html">Products</a></p>
+        <p class="small" style="margin-top:6px;"><a href="beautify.html">Beautify Membership</a></p>
+        <p class="small" style="margin-top:6px;"><a href="heritage.html">Heritage</a></p>
+      </div>
+      <div>
+        <div class="brand-mark">Policies</div>
+        <p class="small" style="margin-top:10px;"><a href="heritage.html#shipping">Shipping</a></p>
+        <p class="small" style="margin-top:6px;"><a href="heritage.html#returns">Returns</a></p>
+        <p class="small" style="margin-top:6px;"><a href="heritage.html#care">Care</a></p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:18px; opacity:.6;">© <span id="year"></span> Averon Elements. All rights reserved.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
